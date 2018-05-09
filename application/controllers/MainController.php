@@ -22,7 +22,6 @@ class MainController extends CI_Controller {
         $this->load->model('User');
         $user = $this->User->getUserName();
          if(isset($user)){
-            
             redirect('/user/home','refresh');
             
         }else{
