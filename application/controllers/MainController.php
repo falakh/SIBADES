@@ -1,8 +1,9 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+//defined('BASEPATH') OR exit('No direct script access allowed');
 
 class MainController extends CI_Controller {
 
+  
     public function pengajuan()
     {
         $this->load->library('session');
@@ -19,16 +20,11 @@ class MainController extends CI_Controller {
     }
     public function index()
     {
-        $this->load->model('User');
-        $user = $this->User->getUserName();
-         if(isset($user)){
-            redirect('/user/home','refresh');
-            
-        }else{
-             $this->load->view('login');
-            //redirect('','refresh');
-
-        }
+       $this->load->view("HomePage");
+    }
+      public function login()
+    {
+        $this->load->view('login');
     }
 }
 
