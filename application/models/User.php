@@ -33,10 +33,13 @@ class User extends CI_Model{
             $this->db->where("user.userName","$temp");
             $result= $this->db->get();
             if($result->num_rows>0){
+                    $this->load->library(("session"));
+                    $this->session->set_userdata('admin',true);
                   $this->db->close();  
                 return true;
             }else{
                   $this->db->close();  
+                  $this->session->set_userdata('admin',false);
                 return false;
             }
     }

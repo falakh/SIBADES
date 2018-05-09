@@ -12,6 +12,8 @@
             $this->load->model('User');
             $this->User->pengajuan($nama,$nik,$perihal);
       }
+      public function pengajuan(){
+      }
   
   }
   
