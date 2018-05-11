@@ -12,12 +12,11 @@
             $this ->load->view('login');            
         }else{
             $this->load->model('User');
-            if($this->User ->login($id,$pass)){
-                $data = array('admin' => $this->admin() );
-                // $data['admin']= $this->admin();
-                $this ->load->view('home',$data); 
+            if($this->User->login($id,$pass)){
+                $this->admin();
+               redirect('','refresh');
             }else{
-                $this ->load->view('login');      
+                redirect('/login','refresh');      
             }
             
         }
@@ -26,6 +25,7 @@
         $this->load->model('User');
        $detector =  $this->User->isAdmin();
         if($detector){
+            echo 'sukses';
             return 'admin';
         }else{
              return '';
