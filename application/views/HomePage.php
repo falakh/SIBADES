@@ -13,34 +13,40 @@
     <script src="../SIBADES/assets/library/jquery.js"></script>
     <script type="text/javascript" src="../SIBADES/assets/semantic/semantic.js"></script>
 
-    <script language='javascript'>
-        $(document).ready(function() {
-            $('.ui.accordion').accordion();
-        });
-    </script>
-
-
 </head>
-
 <body>
-  
-		<?php include ('components/HeaderBar.php'); ?>
+	<?php include ('components/HeaderBar.php'); ?>
 		
-    <div class="main-page">
-        <img class="ui fluid image" src="../SIBADES/assets/image/container.png">
-    </div>
+  <div class="main-page">
+    <img class="ui fluid image" src="../SIBADES/assets/image/container.png">
+  </div>
 
-    <div class="ui center aligned container">
-    	<h1 class="ui header">
-        <div class="content">
-          Ajukan Surat
-          <div class="sub header">
-            <h3>Pengajuan surat-surat kebutuhan warga desa</h3>
+  <div class="ui fluid container">
+    <div class="ui center aligned stackable two column grid">
+      <div class="column">
+        <h2 class="ui header">
+          <div class="content">
+            <h2>Ajukan Surat</h2>
+            <div class="sub header">Pengajuan surat untuk keperluan warga desa</div>
+            <div class="sub header">seperti surat keterangan tidak mampu dan keterangan tidak memiliki rumah</div>
           </div>
-        	<div class="sub header"><button class="ui large primary button" id="pengajuan">Mulai</button></div>
-        </div>
-      </h1>
-    </div>
+        </h2>
+        <a href="pengajuan">
+          <button class="ui primary button">Mulai</button>
+        </a>
+      </div>
+      <div class="column">
+        <h2 class="ui header">
+          <div class="content">
+            <h2>Berita Terkini</h2>
+            <div class="sub header">Menampilkan berita terkini seputar keadaan daerah</div>
+            <div class="sub header">berdasarkan fakta dan data yang ada</div>
+          </div>
+        </h2>
+        <button class="ui primary button">Lihat</button>
+      </div>
+    </div>  	
+  </div>
 
 
 

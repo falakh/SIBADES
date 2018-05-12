@@ -27,7 +27,19 @@
   margin-top: 15px;
 }
 
+.ui.center.aligned.stackable.two.column.grid {
+  padding: 4em;
+}
 
+.ui.center.aligned.stackable.two.column.grid .ui.button{
+  padding: 1em;
+  width: 12em;
+  background-color: #3FA143
+}
+
+.ui.header .content h2{
+  margin-bottom: 1em;
+}
 
 .ui.icon.right.dropdown {
   display: none
