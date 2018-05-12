@@ -19,9 +19,6 @@
           <img src="../SIBADES/assets/image/logo.png" width="460" height="1000">
         </div>
           <a class="item">
-        		Beranda
-      		</a>
-          <a class="item">
         		Informasi
       		</a>
           <a class="item">

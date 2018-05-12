@@ -1,0 +1,15 @@
+#pengajuan-container.ui.container {
+  width: 770px;
+  margin-top: 5em;
+}
+
+.ui.container h1{
+  margin-bottom: 1em;
+}
+
+.ui.form .ui.primary.button {
+  background-color: #3FA143;
+  padding: 1em;
+  width: 10em;
+  margin-top: 0.5em;
+}

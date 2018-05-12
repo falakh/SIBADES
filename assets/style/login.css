@@ -6,16 +6,25 @@
   align-content: center;
   align-self: center;
   margin-top: 8em;
+  
 }
 
-.ui.form .ui.button {
+.ui.form .field .ui.left.icon.input input {
+  border-color: #2CEE60;
+  background-color: white;
+}
+
+.ui.form .ui.primary.button {
   align-self: center;
   width: 313px;
   margin-left: 6px;
+  background-color: #2CEE60;
+  margin-top: 1em;
 }
 
 .ui.form .field .ui.left.icon.input {
   width: 19.5em;
+  color:#2CEE60
 }
 .ui.form img {
   align-self: center;
