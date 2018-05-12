@@ -12,6 +12,10 @@ class MainController extends CI_Controller {
              redirect('','refresh');
         }
     }
+    public function status()
+    {
+        $this->load->view("status");
+    }
     public function home(){
         $this->load->model("User");
         $data = array("admin" => $this->User->isAdmin());
