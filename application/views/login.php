@@ -12,11 +12,11 @@
   <?php include ('components/HeaderBar.php'); ?>
 
   <div class="ui center aligned container">
-    <form class="ui large form" method="post" action="">
+    <form class="ui large form" method="post" action="<?php echo base_url('user/login') ?>">
     <img src="../SIBADES/assets/image/logo.png" width="180" height="50" alt="">
       <div class="field">
         <div class="ui left icon input">
-          <input name="email" placeholder="user@gmail.com" type="text">
+          <input name="userName" placeholder="user@gmail.com" type="text">
           <i class="user icon"></i>
         </div>
       </div>
