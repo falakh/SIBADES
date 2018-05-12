@@ -29,8 +29,8 @@
       		</a>
       		<?php
         	// mengecek user login atau tidak
-        		if(isset($_POST["username"])){
-          		if($_POST['admin']){
+        		if(isset($_SESSION["username"])){
+          		if($_SESSION['admin']){
 							
 							}
         		}
