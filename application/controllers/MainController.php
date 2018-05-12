@@ -1,6 +1,5 @@
 <?php
-//defined('BASEPATH') OR exit('No direct script access allowed');
-
+defined('BASEPATH') OR exit('No direct script access allowed');
 class MainController extends CI_Controller {
 
   
@@ -20,11 +19,24 @@ class MainController extends CI_Controller {
     }
     public function index()
     {
-       $this->load->view("HomePage");
+        $this->load->library("session");
+       $this->load->view("HomePage",$this->session);
     }
       public function login()
     {
         $this->load->view('login');
+    }
+    public function isLogin(){
+        $this->load->library("session");
+       $this->session->userdata("username");
+      
+        if($this->session->userdata("username")){
+            echo $_SESSION["username"]."<br>";
+            echo $_SESSION["admin"];
+            echo "sukses";
+        }else{
+            echo "false";
+        }
     }
 }
 

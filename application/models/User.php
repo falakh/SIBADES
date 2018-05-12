@@ -31,8 +31,8 @@ class User extends CI_Model{
             $this->db->join('admin','user.id_user = admin.id_user');
             $temp = $this->session->userdata('username');
             $this->db->where("user.userName","$temp");
-            $result= $this->db->get();
-            if($result->num_rows>0){
+            $result= $this->db->get()->num_rows();
+            if($result){
                     $this->load->library(("session"));
                     $this->session->set_userdata('admin',true);
                   $this->db->close();  
@@ -60,7 +60,8 @@ class User extends CI_Model{
         $this->db->select('*');
         $this->db->from('pengajuan');
         $this->db->where('id_user',$this->getId());
-        return $this->db->get();
+        $hasil["data"]= $this->db->get()->result_object();
+        return $hasil;
     }
 }
 ?>
