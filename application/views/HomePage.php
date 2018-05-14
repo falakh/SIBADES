@@ -1,4 +1,3 @@
-<?php session_start()?>
 <!DOCTYPE html>
 <html>
 
@@ -23,23 +22,30 @@
 </head>
 
 <body>
-  
-		<?php include ('components/HeaderBar.php'); ?>
-		
+
+    <?php include ('components/HeaderBar.php'); ?>
+
     <div class="main-page">
         <img class="ui fluid image" src="../SIBADES/assets/image/container.png">
     </div>
 
     <div class="ui center aligned container">
-    	<h1 class="ui header">
-        <div class="content">
-          Ajukan Surat
-          <div class="sub header">
-            <h3>Pengajuan surat-surat kebutuhan warga desa</h3>
-          </div>
-        	<div class="sub header"><button class="ui large primary button" id="pengajuan">Mulai</button></div>
-        </div>
-      </h1>
+        <h1 class="ui header">
+            <div class="content">
+                Ajukan Surat
+                <div class="sub header">
+                    <h3>Pengajuan surat-surat kebutuhan warga desa</h3>
+                </div>
+                <div class="sub header">
+                    <a href="http://localhost/SIBADES/user/pengajuan">
+                        <button class="ui large primary button" id="pengajuan">Mulai</button>
+                    </a>
+                    <a href="http://localhost/SIBADES/admin">
+                        <button class="ui large primary button" id="pengajuan">ADmin</button>
+                    </a>
+                </div>
+            </div>
+        </h1>
     </div>
 
 
