@@ -9,6 +9,15 @@ class MainController extends CI_Controller {
         if($this->session->userdata('username')){
             $this->load->view('pengajuan');
         }else{
+             redirect('/login','refresh');
+        }
+    }
+    public function admin()
+    {
+        $this->load->library('session');
+        if($this->session->userdata('admin')){
+            $this->load->view('allPengajuan');
+        }else{
              redirect('','refresh');
         }
     }
