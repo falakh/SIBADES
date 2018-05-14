@@ -14,9 +14,8 @@
             $this->load->database();
             $this->db->set("status",1);
             $this->db->where('id_pengajuan',$id);
-               $this->db->update('pengajuan');
-               $this->db->from('pengajuan');
-            echo json_encode($this->db->get());
+            $this->db->update('pengajuan');
+            $this->db->close();
         }
         public function tolak($id,$pesan)
         {
@@ -26,7 +25,6 @@
             $this->db->where('id_pengajuan',$id);
                $this->db->update('pengajuan');
                $this->db->from('pengajuan');
-            echo json_encode($this->db->affected_rows());
         }
         
     
