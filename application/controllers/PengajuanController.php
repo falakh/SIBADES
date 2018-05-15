@@ -21,6 +21,15 @@
           echo json_encode($result);
         }
       }
+      public function pengajuanUser(){
+          $this->load->library(("session"));
+          $this->load->model("User");
+          if($_SESSION["username"]){
+              $result =   $this->User-> getPengajuan();
+              echo json_encode($result);
+          }
+        
+      }
       public function accPengajuan()
       {
           $this->load->library("session");

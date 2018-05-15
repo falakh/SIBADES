@@ -50,18 +50,24 @@ class User extends CI_Model{
     }
     private function getId():string{
         $this->load->database();
+          $id = $this->getUserName();
+          $this->db->reset_query();
         $this->db->select('id_user');
+        $this->db->where('userName',$id);
         $this->db->from('user');
-        $this->db->where('userName',$this->getUserName());
         return $this->db->get()->row()->id_user; 
     }
     public function  getPengajuan(){
         $this->load->database();
+         $this->db->reset_query();
+         $id = $this->getId();
+         $this->db->reset_query();
         $this->db->select('*');
         $this->db->from('pengajuan');
-        $this->db->where('id_user',$this->getId());
-        $hasil["data"]= $this->db->get()->result_object();
+        $this->db->where('id_user',$id);
+        $hasil= $this->db->get()->result();
         return $hasil;
+        
     }
 }
 ?>

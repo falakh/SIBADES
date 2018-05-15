@@ -19,12 +19,12 @@
         }
         public function tolak($id,$pesan)
         {
-              $this->load->database();
+            $this->load->database();
             $this->db->set("status",2);
             $this->db->set("pesan",$pesan);
             $this->db->where('id_pengajuan',$id);
-               $this->db->update('pengajuan');
-               $this->db->from('pengajuan');
+            $this->db->update('pengajuan');
+            $this->db->from('pengajuan');
         }
         
     
