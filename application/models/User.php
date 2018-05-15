@@ -55,7 +55,7 @@ class User extends CI_Model{
         $this->db->where('userName',$this->getUserName());
         return $this->db->get()->row()->id_user; 
     }
-    public function  getPengajuan(){
+    public function getPengajuan(){
         $this->load->database();
         $this->db->select('*');
         $this->db->from('pengajuan');

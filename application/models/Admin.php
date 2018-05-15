@@ -7,7 +7,7 @@
             $this->load->database();
             $this->db->select('*');
             $this->db->from('pengajuan');
-            $hasil["data"] = $this->db->get()->result_object();
+            $hasil = $this->db->get()->result();
             return $hasil;
         }
         public function setujui($id){

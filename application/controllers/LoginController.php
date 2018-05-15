@@ -23,7 +23,7 @@
         }
      private function admin(){
         $this->load->model('User');
-       $detector =  $this->User->isAdmin();
+        $detector =  $this->User->isAdmin();
         if($detector){
             echo 'sukses';
             return 'admin';
