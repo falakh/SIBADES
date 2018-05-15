@@ -7,7 +7,7 @@
     <title>SIBADES - Sistem Informasi Balai Desa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="../SIBADES/assets/style/login.css" />
+    <link rel="stylesheet" type="text/css" href="../SIBADES/assets/style/home.css" />
     <link rel="stylesheet" type="text/css" href="../SIBADES/assets/semantic/semantic.min.css">
     <script src="../SIBADES/assets/library/jquery.js"></script>
     <script type="text/javascript" src="../SIBADES/assets/semantic/semantic.js"></script>
@@ -22,35 +22,41 @@
 </head>
 
 <body>
+	<?php include ('components/HeaderBar.php'); ?>
+	<div class="main-page">
+    <img class="ui fluid image" src="../SIBADES/assets/image/container.png">
+  </div>
+		
 
-    <?php include ('components/HeaderBar.php'); ?>
+		<div class="ui stackable center aligned two column grid">
+			<div class="column">
+			<h1 class="ui header">
+				<div class="content">
+          Ajukan Surat
+        <div class="sub header">
+          <h3>Pengajuan surat-surat kebutuhan warga desa</h3>
+        </div>
+				<a href="http://localhost/SIBADES/user/pengajuan">
+					<button class="ui large primary button" id="pengajuan">Mulai</button>
+    		</a>
+      </div>
+  	</h1>
+	</div>
 
-    <div class="main-page">
-        <img class="ui fluid image" src="../SIBADES/assets/image/container.png">
-    </div>
-
-    <div class="ui center aligned container">
-        <h1 class="ui header">
-            <div class="content">
-                Ajukan Surat
-                <div class="sub header">
-                    <h3>Pengajuan surat-surat kebutuhan warga desa</h3>
-                </div>
-                <div class="sub header">
-                    <a href="http://localhost/SIBADES/user/pengajuan">
-                        <button class="ui large primary button" id="pengajuan">Mulai</button>
-                    </a>
-                    <a href="http://localhost/SIBADES/admin">
-                        <button class="ui large primary button" id="pengajuan">ADmin</button>
-                    </a>
-                </div>
-            </div>
-        </h1>
-    </div>
-
-
-
-
+	<div class="column">
+		<h1 class="ui header">
+			<div class="content">
+        Berita Terkini
+      <div class="sub header">
+				<h3>Pantau berita terkini yang menyajikan informasi faktual</h3>
+			</div>
+				<a href="">
+					<button class="ui large primary button" id="pengajuan">Mulai</button>
+    		</a>
+      </div>
+  	</h1>
+	</div>
+	</div>
 </body>
 
 </html>

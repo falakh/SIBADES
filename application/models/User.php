@@ -57,7 +57,7 @@ class User extends CI_Model{
         $this->db->from('user');
         return $this->db->get()->row()->id_user; 
     }
-    public function  getPengajuan(){
+    public function getPengajuan(){
         $this->load->database();
          $this->db->reset_query();
          $id = $this->getId();

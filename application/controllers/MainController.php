@@ -6,8 +6,16 @@ class MainController extends CI_Controller {
     public function pengajuan()
     {
         $this->load->library('session');
+        $this->load->model('User');
         if($this->session->userdata('username')){
-            $this->load->view('pengajuan');
+            if($this->User->isAdmin()){
+                $this->load->model('Admin');
+                $data['pengajuan'] = $this->Admin->getAllPengajuan();
+                $this->load->view('pengajuan', $data);
+            }else {
+                $data['pengajuan'] = $this->User->getPengajuan();
+                $this->load->view('pengajuan', $data);
+            }
         }else{
              redirect('/login','refresh');
         }
