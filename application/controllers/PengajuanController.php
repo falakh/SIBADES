@@ -11,6 +11,7 @@
             $perihal = $this->input->post('perihal');
             $this->load->model('User');
             $this->User->pengajuan($nama,$nik,$perihal);
+            redirect('user/pengajuan','refresh');
       }
       public function Allpengajuan()
       {

@@ -9,8 +9,8 @@
 
     <link rel="stylesheet" type="text/css" href="../SIBADES/assets/style/home.css" />
     <link rel="stylesheet" type="text/css" href="../SIBADES/assets/semantic/semantic.min.css">
-    <script src="../SIBADES/assets/library/jquery.js"></script>
-    <script type="text/javascript" src="../SIBADES/assets/semantic/semantic.js"></script>
+		<script src="http://localhost/SIBADES/assets/library/jquery.js"></script>
+  <script src="http://localhost/SIBADES/assets/semantic/semantic.js"></script>
 
     <script language='javascript'>
         $(document).ready(function() {
@@ -32,9 +32,23 @@
 			<div class="column">
 			<h1 class="ui header">
 				<div class="content">
-          Ajukan Surat
+					<?php 
+						if(isset($_SESSION["username"])&& $_SESSION['admin']){
+							echo 'Lihat Pengajuan Surat';
+						}else{
+							echo 'Ajukan Surat';
+						}
+					?>
         <div class="sub header">
-          <h3>Pengajuan surat-surat kebutuhan warga desa</h3>
+          <h3>
+					<?php 
+						if(isset($_SESSION["username"])&& $_SESSION['admin']){
+							echo 'Lihat pengajuan surat warga desa';
+						}else{
+							echo 'Pengajuan surat untuk keperluan warga desa';
+						}
+					?>
+					</h3>
         </div>
 				<a href="http://localhost/SIBADES/user/pengajuan">
 					<button class="ui large primary button" id="pengajuan">Mulai</button>

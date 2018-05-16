@@ -1,6 +1,7 @@
 #pengajuan-container.ui.container {
-  width: 770px;
-  margin-top: 5em;
+  width: 1270px;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .ui.container h1{
@@ -12,5 +13,14 @@
   padding: 1em;
   width: 10em;
   margin-top: 0.5em;
+  color: white;
+}
+
+.ui.modal {
+  padding: 5em;
+}
+
+#create.ui.button{
+  margin-top: 1.5em;
   color: white;
 }
