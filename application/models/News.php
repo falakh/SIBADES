@@ -8,12 +8,19 @@ class News extends CI_Model {
         $this->load->database();
         $data = array(
             'judul' => $judul,
-            'isi' => $isi
+            'isi' => $isi,
+            '$gambar'=>$gambar
         );
+        $this->db->insert("news",$data);
 
     }
-    
-    
+    public function getAllNews()
+    {
+        $this->load->database();
+        $this->db->from('news');
+        $this->db->get_compiled_select('*','news');
+        return json_encode ($this->db->get()->result()); 
+    }
     
     private function saveImage($image){
         $config['upload_path']          = './uploads/';
